@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="css/carrinho.css">
+</head>
+<script src="/js/carrinho.js"></script>
+
+<body>
+  <%- include("../partials/nav") %>
+  <%- include("../partials/header") %>
+
+  <main class="carrinho">
+    <section class="carrinho-esquerda" aria-labelledby="titulo-produtos">
+      <h2 id="titulo-produtos">Produtos</h2>
+
+      <article class="produto">
+        <img src="imagens/vasoautoirrigavel.png" alt="Vaso Autoirrigável">
+        <section class="info">
+          <h3>Vaso Autoirrigável</h3>
+          <p class="preco">R$ 150,00</p>
+          <button class="remover">Excluir</button>
+          <section class="quantidade" aria-label="Quantidade">
+            <button aria-label="Diminuir quantidade">-</button>
+            <span>1</span>
+            <button aria-label="Aumentar quantidade">+</button>
+          </section>
+        </section>
+      </article>
+
+      <article class="produto">
+        <img src="imagens/orquideaphalaenopsis.png" alt="Orquídea Phalaenopsis">
+        <section class="info">
+          <h3>Orquídea Phalaenopsis</h3>
+          <p class="preco">R$ 220,00</p>
+          <button class="remover">Excluir</button>
+          <section class="quantidade" aria-label="Quantidade">
+            <button aria-label="Diminuir quantidade">-</button>
+            <span>2</span>
+            <button aria-label="Aumentar quantidade">+</button>
+          </section>
+        </section>
+      </article>
+    </section>
+
+    <!-- Repetir outros produtos -->
+  </section>
+
+  <aside class="carrinho-direita">
+    <h2>Resumo da compra</h2>
+    <p>Produtos: <span>R$590</span></p>
+    <p>Frete: <span>A calcular</span></p>
+    <hr>
+    <p class="total">Total: <span>R$ 590</span></p>
+   <a href="/"><button class="finalizar">Finalizar Compra</button></a> 
+  </aside>
+</main>
+
+
+  <%- include("../partials/footer") %>
+</body>
+
+</html>

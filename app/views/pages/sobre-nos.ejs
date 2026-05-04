@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós — Floria</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sobre-nos.css">
+</head>
+<body>
+  <%- include("../partials/header") %>
+  <%- include("../partials/nav") %>
+
+  <main>
+    <section class="sobre-hero">
+      <h1>Sobre a Floria</h1>
+      <p>Nascemos do propósito de revitalizar as florestas e inspirar a humanidade a reconectar-se com a essência da natureza.</p>
+    </section>
+
+    <section class="sobre-grid">
+
+      <article class="sobre-bloco sobre-bloco--verde">
+        <section class="sobre-bloco__texto">
+          <h2>Nossa origem</h2>
+          <p>A Floria nasceu do desejo de fazer a diferença e reflorestar o mundo, marcado pela poluição e pelas mudanças climáticas.</p>
+        </section>
+        <figure class="sobre-bloco__imagem" aria-hidden="true"></figure>
+      </article>
+
+      <article class="sobre-bloco sobre-bloco--creme">
+        <figure class="sobre-bloco__imagem" aria-hidden="true"></figure>
+        <section class="sobre-bloco__texto">
+          <h2>Nosso propósito</h2>
+          <p>Nosso propósito vai além de vender plantas e itens de jardim: queremos inspirar um estilo de vida mais consciente e sustentável.</p>
+        </section>
+      </article>
+
+      <article class="sobre-bloco sobre-bloco--verde">
+        <section class="sobre-bloco__texto">
+          <h2>Cada produto, uma história</h2>
+          <p>Cada muda, cada vaso, cada acessório carrega consigo a ideia de cuidar do planeta e melhorar a qualidade de vida das pessoas.</p>
+        </section>
+        <figure class="sobre-bloco__imagem" aria-hidden="true"></figure>
+      </article>
+
+      <article class="sobre-bloco sobre-bloco--creme">
+        <figure class="sobre-bloco__imagem" aria-hidden="true"></figure>
+        <section class="sobre-bloco__texto">
+          <h2>Nossa missão</h2>
+          <p>A Floria existe para reverdecer lares, cidades e corações, mostrando que cada planta é uma oportunidade de renovar o ar e semear esperança.</p>
+        </section>
+      </article>
+
+    </section>
+
+    <section class="sobre-cta">
+      <h2>Comece a cultivar hoje</h2>
+      <a href="/Plantas" class="btn-ver-mais">Ver plantas</a>
+    </section>
+  </main>
+
+  <%- include("../partials/footer") %>
+</body>
+</html>

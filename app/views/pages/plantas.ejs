@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floria — Plantas</title>
+  <link rel="stylesheet" href="css/Vasos.css">
+</head>
+<body>
+
+  <%- include("../partials/header") %>
+  <%- include("../partials/nav") %>
+
+  <main>
+    <section class="page-title">
+      <h1>Plantas</h1>
+      <p>Encontre a planta perfeita para o seu espaço</p>
+    </section>
+
+    <!-- Plantas de Interior -->
+    <section class="cards-section">
+      <header class="section-label"><h2>Plantas de Interior</h2></header>
+      <nav class="carousel-wrapper">
+        <button class="carousel-btn" onclick="scrollCarousel(this,-1)" aria-label="Anterior">&#8592;</button>
+        <ul class="cards-container">
+
+          <li><article class="card">
+            <a href="/detalhes">
+              <figure>
+                <img src="imagens/muda.png" alt="Muda de Comigo Ninguém Pode">
+                <figcaption>
+                  <h3>Muda de Comigo Ninguém Pode</h3>
+                  <p class="price">R$ 211,25</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/singonio.png" alt="Singônio (Syngonium)">
+                <figcaption>
+                  <h3>Singônio (Syngonium)</h3>
+                  <p class="price">R$ 45,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/zamioculca.png" alt="Zamioculca (ZZ Plant)">
+                <figcaption>
+                  <h3>Zamioculca (ZZ Plant)</h3>
+                  <p class="price">R$ 60,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/monstera-deliciosa.png" alt="Monstera deliciosa">
+                <figcaption>
+                  <h3>Monstera deliciosa</h3>
+                  <p class="price">R$ 120,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/sansevieria.png" alt="Espada-de-São-Jorge">
+                <figcaption>
+                  <h3>Espada-de-São-Jorge</h3>
+                  <p class="price">R$ 35,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/philodendron.png" alt="Jiboia (Philodendron)">
+                <figcaption>
+                  <h3>Jiboia (Philodendron)</h3>
+                  <p class="price">R$ 55,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+        </ul>
+        <button class="carousel-btn" onclick="scrollCarousel(this,1)" aria-label="Próximo">&#8594;</button>
+      </nav>
+    </section>
+
+    <!-- Plantas Aromáticas e Pequenas -->
+    <section class="cards-section">
+      <header class="section-label"><h2>Aromáticas & Pequenas</h2></header>
+      <nav class="carousel-wrapper">
+        <button class="carousel-btn" onclick="scrollCarousel(this,-1)" aria-label="Anterior">&#8592;</button>
+        <ul class="cards-container">
+
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/orquideaphalaenopsis.png" alt="Orquídea Phalaenopsis">
+                <figcaption>
+                  <h3>Orquídea Phalaenopsis</h3>
+                  <p class="price">R$ 95,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="/samambaia">
+              <figure>
+                <img src="imagens/samambaia.webp" alt="Samambaia">
+                <figcaption>
+                  <h3>Samambaia</h3>
+                  <p class="price">R$ 111,25</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="/alecrim">
+              <figure>
+                <img src="imagens/alecrim.jpg" alt="Alecrim">
+                <figcaption>
+                  <h3>Alecrim</h3>
+                  <p class="price">R$ 70,25</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="/babosa">
+              <figure>
+                <img src="imagens/baboda.jpg" alt="Babosa">
+                <figcaption>
+                  <h3>Babosa</h3>
+                  <p class="price">R$ 116,25</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="/cacto">
+              <figure>
+                <img src="imagens/cacto.webp" alt="Cacto">
+                <figcaption>
+                  <h3>Cacto</h3>
+                  <p class="price">R$ 61,25</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="/costeladeadao">
+              <figure>
+                <img src="imagens/costeladeadao.webp" alt="Costela de Adão">
+                <figcaption>
+                  <h3>Costela de Adão</h3>
+                  <p class="price">R$ 80,25</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+        </ul>
+        <button class="carousel-btn" onclick="scrollCarousel(this,1)" aria-label="Próximo">&#8594;</button>
+      </nav>
+    </section>
+
+  </main>
+
+  <%- include("../partials/footer") %>
+
+  <script>
+    function scrollCarousel(btn, dir) {
+      const wrapper    = btn.closest('.carousel-wrapper');
+      const container  = wrapper.querySelector('.cards-container');
+      const card       = container.querySelector('.card');
+      const largura    = card ? card.offsetWidth + 16 : 220;
+      container.scrollBy({ left: dir * largura * 2, behavior: 'smooth' });
+    }
+  </script>
+  <script src="/js/itens.js"></script>
+</body>
+</html>

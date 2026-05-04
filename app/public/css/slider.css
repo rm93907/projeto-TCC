@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+/* ═══════════════════════════════════════════
+   SLIDER — BANNER HERO
+═══════════════════════════════════════════ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --verde-escuro:  #1a3d2b;
+  --verde-medio:   #205E47;
+  --dourado:       #b8945f;
+  --dourado-claro: #d4b483;
+  --transicao:     0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── Wrapper ── */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--verde-escuro);
+}
+
+/* ── Cada card/slide ── */
+.card-image {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-image .card1 {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay de texto sobre o slider */
+.card-image .slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 28px 24px;
+  background: linear-gradient(to top, rgba(26,61,43,0.72) 0%, transparent 100%);
+  color: #fff;
+  pointer-events: none;
+}
+.card-image .slide-caption h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+.card-image .slide-caption p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.72);
+  font-weight: 300;
+}
+
+/* ── Card avatar / miniatura redonda ── */
+.card1.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+/* ── Setas ── */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.slider-btn:hover {
+  background: rgba(255,255,255,0.26);
+  transform: translateY(-50%) scale(1.08);
+}
+.slider-btn.prev { left: 16px; }
+.slider-btn.next { right: 16px; }
+
+/* ── Dots ── */
+.slider-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+}
+.slider-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s, transform 0.25s;
+}
+.slider-dot.ativo {
+  background: var(--dourado-claro);
+  transform: scale(1.35);
+}
+.slider-dot:hover { background: rgba(255,255,255,0.75); }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVO
+═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .slider-btn { width: 36px; height: 36px; font-size: 15px; }
+  .slider-btn.prev { left: 8px; }
+  .slider-btn.next { right: 8px; }
+  .card-image .slide-caption { padding: 20px 16px 18px; }
+}

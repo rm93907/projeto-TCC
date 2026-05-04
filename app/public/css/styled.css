@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+:root {
+  --verde-escuro:  #1a3d2b;
+  --verde-medio:   #205E47;
+  --dourado:       #b8945f;
+  --dourado-claro: #d4b483;
+  --creme:         #f7f4ef;
+  --texto:         #1a1a1a;
+  --branco:        #ffffff;
+  --sombra-suave:  0 2px 16px rgba(26,61,43,0.07);
+  --sombra-media:  0 8px 36px rgba(26,61,43,0.13);
+  --raio-grande:   20px;
+  --transicao:     0.3s cubic-bezier(0.4,0,0.2,1);
+  --transicao-mola:0.4s cubic-bezier(0.34,1.56,0.64,1);
+  --fonte-titulo:  'Cormorant Garamond', Georgia, serif;
+  --fonte-corpo:   'DM Sans', system-ui, sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--fonte-corpo); background: var(--creme); color: var(--texto); min-height: 100vh; display: flex; flex-direction: column; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+main { flex: 1; }
+
+/* ═══════════════════════════════════════════
+   HERO DA PÁGINA
+═══════════════════════════════════════════ */
+.page-title {
+  background: linear-gradient(135deg, var(--verde-escuro) 0%, #2d6646 60%, #1a3d2b 100%);
+  color: #fff;
+  padding: 52px 32px 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-title::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 30%, rgba(184,148,95,0.16) 0%, transparent 60%);
+  pointer-events: none;
+}
+.page-title::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+}
+.page-title h1 {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.1rem, 5.5vw, 3.2rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  position: relative;
+  margin-bottom: 10px;
+}
+.page-title p {
+  color: rgba(255,255,255,0.58);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+  position: relative;
+  max-width: 360px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.page-title-linha {
+  width: 40px;
+  height: 1px;
+  background: rgba(184,148,95,0.6);
+  margin: 20px auto 0;
+  position: relative;
+}
+
+/* ═══════════════════════════════════════════
+   FILTROS / CATEGORIAS
+═══════════════════════════════════════════ */
+.filtros {
+  display: flex;
+  gap: 8px;
+  padding: 24px 28px 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.filtros::-webkit-scrollbar { display: none; }
+.filtro-btn {
+  flex-shrink: 0;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(26,61,43,0.2);
+  background: transparent;
+  color: var(--verde-escuro);
+  font-family: var(--fonte-corpo);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transicao);
+}
+.filtro-btn:hover,
+.filtro-btn.ativo {
+  background: var(--verde-medio);
+  border-color: var(--verde-medio);
+  color: var(--branco);
+}
+
+/* ═══════════════════════════════════════════
+   SECTION LABEL
+═══════════════════════════════════════════ */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 38px 28px 18px;
+}
+.section-label h2 {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+  color: var(--verde-escuro);
+  font-weight: 300;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(184,148,95,0.5), transparent);
+}
+
+/* ═══════════════════════════════════════════
+   CARDS CONTAINER
+═══════════════════════════════════════════ */
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 8px 28px 24px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dourado-claro) transparent;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+.cards-container::-webkit-scrollbar { height: 4px; }
+.cards-container::-webkit-scrollbar-thumb {
+  background: var(--dourado-claro);
+  border-radius: 10px;
+}
+
+/* ═══════════════════════════════════════════
+   CARD
+═══════════════════════════════════════════ */
+.card {
+  flex: 0 0 200px;
+  background: var(--branco);
+  border-radius: var(--raio-grande);
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition:
+    transform var(--transicao-mola),
+    box-shadow var(--transicao);
+  box-shadow: var(--sombra-suave);
+  border: 1px solid rgba(184,148,95,0.11);
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--sombra-media);
+}
+.card a { display: flex; flex-direction: column; }
+.card figure { display: flex; flex-direction: column; }
+
+/* Wrapper da imagem com overflow para o zoom */
+.card .img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.55s ease;
+  display: block;
+}
+.card:hover img { transform: scale(1.07); }
+
+.card figcaption,
+.card h3 {
+  padding: 12px 14px 16px;
+}
+.card h3,
+.card figcaption h3 {
+  font-family: var(--fonte-corpo);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--texto);
+  line-height: 1.45;
+  min-height: 34px;
+  margin-bottom: 6px;
+}
+.price,
+.card figcaption .price {
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+  color: var(--verde-medio);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Botão rápido (aparece no hover) */
+.card-acao {
+  margin: 0 14px 14px;
+  padding: 9px;
+  background: var(--verde-medio);
+  color: var(--branco);
+  border: none;
+  border-radius: 999px;
+  font-family: var(--fonte-corpo);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--transicao), transform var(--transicao), background var(--transicao);
+}
+.card:hover .card-acao {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-acao:hover { background: var(--verde-escuro); }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVO
+═══════════════════════════════════════════ */
+@media (min-width: 600px) {
+  .card { flex: 0 0 220px; }
+  .card img { height: 200px; }
+}
+@media (min-width: 1024px) {
+  .cards-container { gap: 20px; padding: 8px 36px 28px; }
+  .card { flex: 0 0 242px; }
+  .card img { height: 222px; }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos — Floria Admin</title>
+    <link rel="stylesheet" href="css/adm2.css">
+</head>
+<body>
+    <%- include("../partials/header-adm") %>
+    <%- include("../partials/nav-adm2") %>
+
+    <main>
+        <h1>Bem-vindo à área dos Pedidos!</h1>
+        <h2 class="Estoque">Pedidos</h2>
+
+        <search class="busca" role="search" aria-label="Buscar pedidos">
+            <label for="busca-pedidos" class="sr-only">Buscar</label>
+            <input id="busca-pedidos" class="barra" type="search" placeholder="Buscar..." />
+        </search>
+
+        <section class="lista-com-scroll" aria-label="Lista de pedidos">
+            <ul>
+                <li><p>Sem pedidos no momento...</p></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

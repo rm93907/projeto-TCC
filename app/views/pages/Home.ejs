@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floria — Plantas & Vasos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Vasos.css">
+</head>
+<body>
+  <%- include("../partials/header") %>
+  <%- include("../partials/nav") %>
+
+  <main>
+    <%- include("../partials/carrosel") %>
+
+    <aside class="home-hero-strip" aria-label="Promoção de frete">
+      <p>
+        <span class="leaf-icon" aria-hidden="true">🌿</span>
+        Frete grátis para SP capital em compras acima de R$ 150
+        <span class="leaf-icon" aria-hidden="true">🌿</span>
+      </p>
+    </aside>
+
+    <section class="cards-section divisoriaplantas" aria-labelledby="titulo-plantas">
+      <header class="section-label">
+        <h2 id="titulo-plantas">Plantas</h2>
+      </header>
+      <nav class="carousel-wrapper">
+        <button class="carousel-btn" onclick="scrollCarousel(this,-1)" aria-label="Anterior">&#8592;</button>
+        <ul class="cards-container">
+          <li><article class="card">
+            <a href="/detalhes">
+              <figure>
+                <img src="imagens/muda.png" alt="Comigo Ninguém Pode">
+                <figcaption><h3>Comigo Ninguém Pode</h3><p class="price">R$ 150,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/singonio.png" alt="Singônio">
+                <figcaption><h3>Singônio (Syngonium)</h3><p class="price">R$ 45,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/zamioculca.png" alt="Zamioculca">
+                <figcaption><h3>Zamioculca (ZZ Plant)</h3><p class="price">R$ 60,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/monstera-deliciosa.png" alt="Monstera deliciosa">
+                <figcaption><h3>Monstera deliciosa</h3><p class="price">R$ 120,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/sansevieria.png" alt="Espada-de-São-Jorge">
+                <figcaption><h3>Espada-de-São-Jorge</h3><p class="price">R$ 35,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/philodendron.png" alt="Jiboia (Philodendron)">
+                <figcaption><h3>Jiboia (Philodendron)</h3><p class="price">R$ 55,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+        </ul>
+        <button class="carousel-btn" onclick="scrollCarousel(this,1)" aria-label="Próximo">&#8594;</button>
+      </nav>
+      <p class="section-ver-mais"><a href="/Plantas" class="btn-ver-mais">Ver todas as plantas</a></p>
+    </section>
+
+    <section class="home-banner-middle" aria-label="Nossa missão">
+      <figure class="home-banner-middle-content">
+        <figcaption>
+          <h2>Cuide do planeta.<br>Comece em casa.</h2>
+          <p>Cada planta que você cultiva é um passo para um mundo mais verde.</p>
+          <a href="/sobre-nos" class="btn-banner">Nossa história</a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="cards-section divisoriavasos" aria-labelledby="titulo-vasos">
+      <header class="section-label">
+        <h2 id="titulo-vasos">Vasos</h2>
+      </header>
+      <nav class="carousel-wrapper">
+        <button class="carousel-btn" onclick="scrollCarousel(this,-1)" aria-label="Anterior">&#8592;</button>
+        <ul class="cards-container2">
+          <li><article class="card">
+            <a href="/DetalhesV">
+              <figure>
+                <img src="imagens/vasoautoirrigavel.png" alt="Vaso Autoirrigável">
+                <figcaption><h3>Vaso Autoirrigável</h3><p class="price">R$ 90,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasoceramicarosa.jpg" alt="Vaso de Cerâmica Rosa">
+                <figcaption><h3>Vaso de Cerâmica Rosa</h3><p class="price">R$ 65,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasocimentorustico.png" alt="Vaso de Cimento Rústico">
+                <figcaption><h3>Vaso de Cimento Rústico</h3><p class="price">R$ 50,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasosuspensomacrame.png" alt="Vaso Suspenso Macramê">
+                <figcaption><h3>Vaso Suspenso Macramê</h3><p class="price">R$ 80,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasovidrotransparente.png" alt="Vaso de Vidro Transparente">
+                <figcaption><h3>Vaso de Vidro Transparente</h3><p class="price">R$ 45,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasoconcretogeom.png" alt="Vaso Concreto Geométrico">
+                <figcaption><h3>Vaso Concreto Geométrico</h3><p class="price">R$ 68,00</p></figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer"><button class="btn-comprar">Comprar</button></footer>
+          </article></li>
+        </ul>
+        <button class="carousel-btn" onclick="scrollCarousel(this,1)" aria-label="Próximo">&#8594;</button>
+      </nav>
+      <p class="section-ver-mais"><a href="/Vasos" class="btn-ver-mais">Ver todos os vasos</a></p>
+    </section>
+  </main>
+
+  <%- include("../partials/footer") %>
+
+  <script>
+    function scrollCarousel(btn, dir) {
+      const wrapper   = btn.closest('.carousel-wrapper');
+      const container = wrapper.querySelector('.cards-container, .cards-container2');
+      const card      = container.querySelector('.card');
+      const largura   = card ? card.offsetWidth + 16 : 220;
+      container.scrollBy({ left: dir * largura * 2, behavior: 'smooth' });
+    }
+  </script>
+  <script src="/js/itens.js"></script>
+</body>
+</html>

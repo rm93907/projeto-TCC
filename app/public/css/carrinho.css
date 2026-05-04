@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+:root {
+  --verde-escuro:  #1a3d2b;
+  --verde-medio:   #205E47;
+  --dourado:       #b8945f;
+  --dourado-claro: #d4b483;
+  --creme:         #f7f4ef;
+  --texto:         #1a1a1a;
+  --texto-suave:   #5a5a4a;
+  --branco:        #ffffff;
+  --perigo:        #b94040;
+  --transicao:     0.28s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ═══════════════════════════════════════════
+   LAYOUT PRINCIPAL
+═══════════════════════════════════════════ */
+.carrinho {
+  display: flex;
+  gap: 28px;
+  padding: 44px 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* ═══════════════════════════════════════════
+   COLUNA ESQUERDA — lista de produtos
+═══════════════════════════════════════════ */
+.carrinho-esquerda {
+  flex: 2;
+  min-width: 300px;
+  background: var(--branco);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 4px 28px rgba(26,61,43,0.08);
+  border: 1px solid rgba(184,148,95,0.12);
+}
+.carrinho-esquerda h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+  color: var(--verde-escuro);
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(184,148,95,0.2);
+  letter-spacing: 0.02em;
+}
+
+/* ── Produto individual ── */
+.produto {
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.055);
+  gap: 18px;
+  transition: background var(--transicao);
+  border-radius: 8px;
+}
+.produto:last-child { border-bottom: none; }
+
+.produto img {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(184,148,95,0.14);
+  flex-shrink: 0;
+  transition: transform var(--transicao);
+}
+.produto:hover img { transform: scale(1.03); }
+
+.produto .info {
+  flex: 1;
+  min-width: 160px;
+}
+.produto .info h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--texto);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+.produto .preco {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--verde-medio);
+  margin: 5px 0 10px;
+  letter-spacing: 0.01em;
+}
+
+/* Botão remover */
+.remover {
+  background: none;
+  border: none;
+  color: var(--perigo);
+  font-size: 11.5px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  padding: 2px 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: opacity var(--transicao), color var(--transicao);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.remover:hover { opacity: 0.72; text-decoration: underline; }
+
+/* Controle de quantidade */
+.quantidade {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: fit-content;
+  background: var(--branco);
+}
+.quantidade button {
+  background: var(--creme);
+  border: none;
+  padding: 6px 13px;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 1;
+  color: var(--verde-escuro);
+  transition: background var(--transicao);
+  user-select: none;
+}
+.quantidade button:hover { background: #e0ddd5; }
+.quantidade button:active { background: #d4d1c9; }
+.quantidade span {
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 40px;
+  text-align: center;
+  background: var(--branco);
+  color: var(--texto);
+  border-left: 1px solid rgba(0,0,0,0.07);
+  border-right: 1px solid rgba(0,0,0,0.07);
+}
+
+/* ═══════════════════════════════════════════
+   COLUNA DIREITA — resumo do pedido
+═══════════════════════════════════════════ */
+.carrinho-direita {
+  flex: 1;
+  min-width: 240px;
+  background: var(--branco);
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 4px 28px rgba(26,61,43,0.08);
+  border: 1px solid rgba(184,148,95,0.12);
+  position: sticky;
+  top: 90px;
+}
+.carrinho-direita h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: var(--verde-escuro);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(184,148,95,0.2);
+  letter-spacing: 0.02em;
+}
+.carrinho-direita p {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  font-size: 13.5px;
+  color: var(--texto-suave);
+}
+.carrinho-direita p strong {
+  color: var(--texto);
+  font-weight: 500;
+}
+.carrinho-direita hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.07);
+  margin: 16px 0;
+}
+.carrinho-direita .total {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin-top: 4px;
+}
+.carrinho-direita .total span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--verde-medio);
+  font-weight: 600;
+}
+
+/* Cupom */
+.campo-cupom {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+.campo-cupom input {
+  flex: 1;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color var(--transicao);
+  background: var(--creme);
+  color: var(--texto);
+}
+.campo-cupom input:focus { border-color: var(--verde-medio); background: var(--branco); }
+.campo-cupom button {
+  background: var(--creme);
+  border: 1px solid rgba(0,0,0,0.1);
+  color: var(--verde-escuro);
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'DM Sans', sans-serif;
+  transition: background var(--transicao);
+}
+.campo-cupom button:hover { background: #e0ddd5; }
+
+/* Botão finalizar */
+.finalizar {
+  margin-top: 20px;
+  width: 100%;
+  background: var(--verde-medio);
+  color: var(--branco);
+  border: none;
+  padding: 15px;
+  border-radius: 999px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transicao), transform var(--transicao), box-shadow var(--transicao);
+  box-shadow: 0 4px 16px rgba(32,94,71,0.22);
+}
+.finalizar:hover {
+  background: var(--verde-escuro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(32,94,71,0.28);
+}
+.finalizar:active { transform: translateY(0); }
+
+/* ═══════════════════════════════════════════
+   ESTADO VAZIO
+═══════════════════════════════════════════ */
+.carrinho-vazio {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--texto-suave);
+}
+.carrinho-vazio p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVO
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .carrinho { flex-direction: column; padding: 24px 16px; }
+  .carrinho-direita { position: static; width: 100%; }
+  .produto { flex-wrap: wrap; }
+  .produto img { width: 72px; height: 72px; }
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floria — Mais Vendidos</title>
+  <link rel="stylesheet" href="css/Vasos.css">
+</head>
+<body>
+
+  <%- include("../partials/header") %>
+  <%- include("../partials/nav") %>
+
+  <main>
+    <section class="page-title">
+      <h1>Mais Vendidos</h1>
+      <p>Os preferidos dos nossos clientes</p>
+    </section>
+
+    <!-- Plantas mais vendidas -->
+    <section class="cards-section">
+      <header class="section-label"><h2>Plantas</h2></header>
+      <nav class="carousel-wrapper">
+        <button class="carousel-btn" onclick="scrollCarousel(this,-1)" aria-label="Anterior">&#8592;</button>
+        <ul class="cards-container">
+
+          <li><article class="card">
+            <a href="/detalhes">
+              <figure>
+                <img src="imagens/muda.png" alt="Comigo Ninguém Pode">
+                <figcaption>
+                  <h3>Comigo Ninguém Pode</h3>
+                  <p class="price">R$ 211,25</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/samambaia.webp" alt="Samambaia">
+                <figcaption>
+                  <h3>Samambaia</h3>
+                  <p class="price">R$ 65,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/alecrim.jpg" alt="Alecrim">
+                <figcaption>
+                  <h3>Alecrim</h3>
+                  <p class="price">R$ 35,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/baboda.jpg" alt="Babosa">
+                <figcaption>
+                  <h3>Babosa</h3>
+                  <p class="price">R$ 125,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/cacto.webp" alt="Cacto">
+                <figcaption>
+                  <h3>Cacto</h3>
+                  <p class="price">R$ 89,99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/costeladeadao.webp" alt="Costela de Adão">
+                <figcaption>
+                  <h3>Costela de Adão</h3>
+                  <p class="price">R$ 250,99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/orquidea.jpg" alt="Orquídea">
+                <figcaption>
+                  <h3>Orquídea</h3>
+                  <p class="price">R$ 99,99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/hortela.png" alt="Hortelã">
+                <figcaption>
+                  <h3>Hortelã</h3>
+                  <p class="price">R$ 78,25</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/jasmim.png" alt="Jasmim">
+                <figcaption>
+                  <h3>Jasmim</h3>
+                  <p class="price">R$ 75,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/manjericao.jpg" alt="Manjericão">
+                <figcaption>
+                  <h3>Manjericão</h3>
+                  <p class="price">R$ 100,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+        </ul>
+        <button class="carousel-btn" onclick="scrollCarousel(this,1)" aria-label="Próximo">&#8594;</button>
+      </nav>
+    </section>
+
+    <!-- Vasos mais vendidos -->
+    <section class="cards-section">
+      <header class="section-label"><h2>Vasos</h2></header>
+      <nav class="carousel-wrapper">
+        <button class="carousel-btn" onclick="scrollCarousel(this,-1)" aria-label="Anterior">&#8592;</button>
+        <ul class="cards-container">
+
+          <li><article class="card">
+            <a href="/detalhesv">
+              <figure>
+                <img src="imagens/image.png" alt="Vaso Decorativo Marrom">
+                <figcaption>
+                  <h3>Vaso Decorativo Marrom</h3>
+                  <p class="price">R$ 299,99</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasomadeirabambu.png" alt="Cachepô de Madeira Bambu">
+                <figcaption>
+                  <h3>Cachepô de Madeira Bambu</h3>
+                  <p class="price">R$ 70,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasoceramicadecorado.png" alt="Vaso Cerâmica Decorado">
+                <figcaption>
+                  <h3>Vaso Cerâmica Decorado</h3>
+                  <p class="price">R$ 75,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vaso-de-barro.png" alt="Vaso de Barro">
+                <figcaption>
+                  <h3>Vaso de Barro</h3>
+                  <p class="price">R$ 45,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vaso-ceramica-azul.png" alt="Vaso Cerâmica Azul">
+                <figcaption>
+                  <h3>Vaso Cerâmica Azul</h3>
+                  <p class="price">R$ 95,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasosuspensometal.png" alt="Vaso Suspenso de Metal">
+                <figcaption>
+                  <h3>Vaso Suspenso de Metal</h3>
+                  <p class="price">R$ 85,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasobarrotradicional.png" alt="Vaso de Barro Tradicional">
+                <figcaption>
+                  <h3>Vaso de Barro Tradicional</h3>
+                  <p class="price">R$ 40,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasoautoirrigaveltransparente.png" alt="Vaso Autoirrigável Transparente">
+                <figcaption>
+                  <h3>Vaso Autoirrigável Transparente</h3>
+                  <p class="price">R$ 95,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+        </ul>
+        <button class="carousel-btn" onclick="scrollCarousel(this,1)" aria-label="Próximo">&#8594;</button>
+      </nav>
+    </section>
+
+  </main>
+
+  <%- include("../partials/footer") %>
+
+  <script>
+    function scrollCarousel(btn, dir) {
+      const wrapper   = btn.closest('.carousel-wrapper');
+      const container = wrapper.querySelector('.cards-container');
+      const card      = container.querySelector('.card');
+      const largura   = card ? card.offsetWidth + 16 : 220;
+      container.scrollBy({ left: dir * largura * 2, behavior: 'smooth' });
+    }
+  </script>
+  <script src="/js/itens.js"></script>
+</body>
+</html>

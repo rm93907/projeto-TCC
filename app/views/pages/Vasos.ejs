@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floria — Vasos & Cachepôs</title>
+  <link rel="stylesheet" href="css/Vasos.css">
+</head>
+
+<body>
+  <%- include("../partials/header") %>
+  <%- include("../partials/nav") %>
+
+  <main>
+    <section class="page-title">
+      <h1>Vasos & Cachepôs</h1>
+      <p>Escolha o vaso perfeito para cada planta</p>
+    </section>
+
+    <!-- Em Destaque -->
+    <section class="cards-section">
+      <header class="section-label"><h2>Em Destaque</h2></header>
+      <nav class="carousel-wrapper">
+        <button class="carousel-btn" onclick="scrollCarousel(this,-1)" aria-label="Anterior">&#8592;</button>
+        <ul class="cards-container">
+
+          <li><article class="card">
+            <a href="/DetalhesV">
+              <figure>
+                <img src="imagens/vasoautoirrigavel.png" alt="Vaso Autoirrigável">
+                <figcaption>
+                  <h3>Vaso Autoirrigável</h3>
+                  <p class="price">R$ 90,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vaso de ceramica azul.png" alt="Vaso de Cerâmica Azul">
+                <figcaption>
+                  <h3>Vaso de Cerâmica Azul</h3>
+                  <p class="price">R$ 95,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasobarrotradicional.png" alt="Vaso de Barro Tradicional">
+                <figcaption>
+                  <h3>Vaso de Barro Tradicional</h3>
+                  <p class="price">R$ 40,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasoautoirrigaveltransparente.png" alt="Vaso Autoirrigável Transparente">
+                <figcaption>
+                  <h3>Vaso Autoirrigável Transparente</h3>
+                  <p class="price">R$ 95,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vaso-de-barro.png" alt="Vaso de Barro">
+                <figcaption>
+                  <h3>Vaso de Barro</h3>
+                  <p class="price">R$ 45,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/g1.png" alt="Vaso Decorativo">
+                <figcaption>
+                  <h3>Vaso Decorativo Verde</h3>
+                  <p class="price">R$ 68,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+        </ul>
+        <button class="carousel-btn" onclick="scrollCarousel(this,1)" aria-label="Próximo">&#8594;</button>
+      </nav>
+    </section>
+
+    <!-- Cerâmica & Barro -->
+    <section class="cards-section">
+      <header class="section-label"><h2>Cerâmica & Barro</h2></header>
+      <nav class="carousel-wrapper">
+        <button class="carousel-btn" onclick="scrollCarousel(this,-1)" aria-label="Anterior">&#8592;</button>
+        <ul class="cards-container">
+
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vaso de ceramica azul.png" alt="Vaso Cerâmica Azul">
+                <figcaption>
+                  <h3>Vaso Cerâmica Azul</h3>
+                  <p class="price">R$ 95,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasobarrotradicional.png" alt="Vaso de Barro Tradicional">
+                <figcaption>
+                  <h3>Vaso de Barro Tradicional</h3>
+                  <p class="price">R$ 40,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vaso-de-barro.png" alt="Vaso de Barro">
+                <figcaption>
+                  <h3>Vaso de Barro Artesanal</h3>
+                  <p class="price">R$ 45,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/g2.png" alt="Vaso Esmaltado">
+                <figcaption>
+                  <h3>Vaso Esmaltado</h3>
+                  <p class="price">R$ 72,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/v.png" alt="Vaso Cerâmica Decorado">
+                <figcaption>
+                  <h3>Vaso Cerâmica Decorado</h3>
+                  <p class="price">R$ 75,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+        </ul>
+        <button class="carousel-btn" onclick="scrollCarousel(this,1)" aria-label="Próximo">&#8594;</button>
+      </nav>
+    </section>
+
+    <!-- Autoirrigáveis & Modernos -->
+    <section class="cards-section">
+      <header class="section-label"><h2>Autoirrigáveis & Modernos</h2></header>
+      <nav class="carousel-wrapper">
+        <button class="carousel-btn" onclick="scrollCarousel(this,-1)" aria-label="Anterior">&#8592;</button>
+        <ul class="cards-container">
+
+          <li><article class="card">
+            <a href="/DetalhesV">
+              <figure>
+                <img src="imagens/vasoautoirrigavel.png" alt="Vaso Autoirrigável">
+                <figcaption>
+                  <h3>Vaso Autoirrigável</h3>
+                  <p class="price">R$ 90,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/vasoautoirrigaveltransparente.png" alt="Autoirrigável Transparente">
+                <figcaption>
+                  <h3>Autoirrigável Transparente</h3>
+                  <p class="price">R$ 95,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/g1.png" alt="Vaso Geométrico">
+                <figcaption>
+                  <h3>Vaso Geométrico</h3>
+                  <p class="price">R$ 68,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+          <li><article class="card">
+            <a href="#">
+              <figure>
+                <img src="imagens/g2.png" alt="Vaso Minimalista">
+                <figcaption>
+                  <h3>Vaso Minimalista</h3>
+                  <p class="price">R$ 60,00</p>
+                </figcaption>
+              </figure>
+            </a>
+            <footer class="card-footer">
+              <button class="btn-comprar">Comprar</button>
+            </footer>
+          </article>
+          </li>
+        </ul>
+        <button class="carousel-btn" onclick="scrollCarousel(this,1)" aria-label="Próximo">&#8594;</button>
+      </nav>
+    </section>
+
+  </main>
+
+  <%- include("../partials/footer") %>
+
+  <script>
+    function scrollCarousel(btn, dir) {
+      const wrapper = btn.closest('.carousel-wrapper');
+      const container = wrapper.querySelector('.cards-container');
+      const card = container.querySelector('.card');
+      const largura = card ? card.offsetWidth + 16 : 220;
+      container.scrollBy({ left: dir * largura * 2, behavior: 'smooth' });
+    }
+  </script>
+  <script src="/js/itens.js"></script>
+</body>
+</html>

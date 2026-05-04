@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+/* ═══════════════════════════════════════════
+   NAVBAR
+═══════════════════════════════════════════ */
+.navbar {
+  width: 100%;
+  z-index: 200;
+  padding: 0 32px;
+  background-color: var(--verde-escuro, #1a3d2b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  position: sticky;
+  top: 0;
+  /* Sombra discreta que dá profundidade sem pesar */
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 4px 24px rgba(0,0,0,0.22);
+  /* Borda dourada sutilíssima na base */
+  border-bottom: 1px solid rgba(184,148,95,0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar .max-width {
+  width: 100%;
+  max-width: 1340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* ═══════════════════════════════════════════
+   LOGO
+═══════════════════════════════════════════ */
+.logo {
+  flex-shrink: 0;
+}
+.logo img {
+  height: 52px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.logo img:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+
+/* ═══════════════════════════════════════════
+   MENU DESKTOP
+═══════════════════════════════════════════ */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.menu li a {
+  color: rgba(255,255,255,0.82);
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 7px 15px;
+  border-radius: 999px;
+  transition: color 0.22s ease, background 0.22s ease;
+  display: block;
+}
+.menu li a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+/* Item ativo */
+.menu li a.ativo {
+  color: #fff;
+  background: rgba(184,148,95,0.22);
+}
+
+/* ═══════════════════════════════════════════
+   BUSCA
+═══════════════════════════════════════════ */
+.serch-icon {
+  height: 38px;
+  flex: 1;
+  max-width: 260px;
+  display: flex;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  overflow: hidden;
+  transition: background 0.25s ease, border-color 0.25s ease, max-width 0.35s ease;
+}
+.serch-icon:focus-within {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.38);
+  max-width: 320px;
+}
+.serch-icon input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  background: transparent;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 13.5px;
+}
+.serch-icon input::placeholder { color: rgba(255,255,255,0.45); }
+.serch-icon .icon {
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(255,255,255,0.62);
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+.serch-icon .icon:hover { color: #fff; }
+.serch-icon .icon i { font-size: 14px; }
+
+/* ═══════════════════════════════════════════
+   ÍCONES (carrinho, perfil, etc.)
+═══════════════════════════════════════════ */
+.icones {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.icones a {
+  color: rgba(255,255,255,0.82);
+  font-size: 19px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: color 0.22s ease, background 0.22s ease, transform 0.22s ease;
+  position: relative;
+}
+.icones a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  transform: scale(1.1);
+}
+/* Badge de quantidade no carrinho */
+.icones a .badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 16px;
+  height: 16px;
+  background: var(--dourado, #b8945f);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ═══════════════════════════════════════════
+   NAV MOBILE (faixa abaixo da navbar)
+═══════════════════════════════════════════ */
+.nav-mobile {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════
+   TABLET  (770px – 1024px)
+═══════════════════════════════════════════ */
+@media (min-width: 770px) and (max-width: 1024px) {
+  .menu { display: none; }
+  .logo img { height: 46px; }
+
+  .nav-mobile {
+    display: flex;
+    justify-content: center;
+    background-color: #184033;
+    border-bottom: 1px solid rgba(184,148,95,0.15);
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: sticky;
+    top: 72px;
+    z-index: 199;
+  }
+  .nav-mobile::-webkit-scrollbar { display: none; }
+  .nav-mobile ul {
+    display: flex;
+    list-style: none;
+    padding: 0 16px;
+    gap: 0;
+  }
+  .nav-mobile li a {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.82);
+    padding: 11px 14px;
+    transition: color 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
+  }
+  .nav-mobile li a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.09);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   CELULAR  (≤ 769px)
+═══════════════════════════════════════════ */
+@media (max-width: 769px) {
+  .navbar {
+    height: auto;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .max-width {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .menu { display: none; }
+  .logo img { height: 44px; }
+  .serch-icon {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+  .icones { gap: 0; }
+  .icones a { font-size: 18px; width: 36px; height: 36px; }
+
+  .nav-mobile {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #184033;
+    border-bottom: 1px solid rgba(184,148,95,0.15);
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    position: sticky;
+    top: 0;
+    z-index: 199;
+  }
+  .nav-mobile::-webkit-scrollbar { display: none; }
+  .nav-mobile ul {
+    display: flex;
+    list-style: none;
+    padding: 0 8px;
+    gap: 0;
+    white-space: nowrap;
+  }
+  .nav-mobile li a {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.82);
+    padding: 11px 12px;
+    transition: color 0.2s ease;
+  }
+  .nav-mobile li a:hover { color: #fff; }
+}

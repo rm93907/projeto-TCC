@@ -1,0 +1,156 @@
+/* ═══════════════════════════════════════════
+   ADMIN — ESTOQUE (adm2.css)
+   Complementa adm.css — importe depois dele.
+═══════════════════════════════════════════ */
+
+/* ── Barra de busca ── */
+.busca {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.barra {
+  width: 100%;
+  max-width: 560px;
+  height: 38px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 13.5px;
+  outline: none;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+.barra::placeholder { color: rgba(255,255,255,0.48); }
+.barra:focus {
+  border-color: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.18);
+}
+
+/* ── Ícones da topbar ── */
+.icones {
+  margin-right: 8px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.icones img {
+  width: 36px;
+  cursor: pointer;
+  opacity: 0.82;
+  transition: opacity 0.2s ease;
+}
+.icones img:hover { opacity: 1; }
+
+/* ── Título da página ── */
+h1.Estoque {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1a3d2b;
+  margin-top: 32px;
+  margin-bottom: 4px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(184,148,95,0.2);
+}
+
+/* ── Lista com scroll (tabela de produtos) ── */
+.lista-com-scroll {
+  max-height: 560px;
+  overflow-y: auto;
+  margin-top: 24px;
+  /* Scroll suave */
+  scroll-behavior: smooth;
+  /* Barra de scroll discreta */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(184,148,95,0.4) transparent;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.07);
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(26,61,43,0.06);
+}
+.lista-com-scroll::-webkit-scrollbar { width: 5px; }
+.lista-com-scroll::-webkit-scrollbar-thumb {
+  background: rgba(184,148,95,0.35);
+  border-radius: 10px;
+}
+
+.lista-com-scroll ul {
+  list-style: none;
+  padding: 8px;
+}
+.lista-com-scroll ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  background: #f5f4f0;
+  font-size: 14px;
+  color: #1a1a1a;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  cursor: default;
+}
+.lista-com-scroll ul li:hover {
+  background: #ede9e0;
+  border-color: rgba(184,148,95,0.2);
+}
+.lista-com-scroll ul li:last-child { margin-bottom: 0; }
+
+/* Campos internos do item */
+.lista-com-scroll ul li .item-nome {
+  font-weight: 500;
+  flex: 1;
+}
+.lista-com-scroll ul li .item-qtd {
+  font-size: 13px;
+  color: #5a5a4a;
+  margin: 0 16px;
+}
+.lista-com-scroll ul li .item-preco {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: #205E47;
+  font-weight: 600;
+}
+
+/* Badge de alerta (estoque baixo) */
+.lista-com-scroll ul li .badge-alerta {
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-left: 12px;
+  background: rgba(185,64,64,0.1);
+  color: #b94040;
+}
+.lista-com-scroll ul li .badge-ok {
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-left: 12px;
+  background: rgba(32,94,71,0.1);
+  color: #205E47;
+}
+
+/* ── Override de main para esta página ── */
+main {
+  margin-left: var(--sidebar-w, 230px);
+  margin-top: 60px;
+  padding: 32px 28px;
+  color: #1a1a1a;
+  min-height: calc(100vh - 60px);
+}
+
+/* ── Override de sidebar para esta página ── */
+section ul.menu1 {
+  min-height: 100vh;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="css/styled.css" />
+</head>
+
+<body>
+
+    <%- include("../partials/nav") %>
+        <%- include("../partials/header") %>
+
+            <main class="container-detalhes">
+
+                <section class="galeria">
+                    <section class="miniaturas">
+                        <img src="imagens/logoflor.png" />
+                        <img src="imagens/baboda.jpg" />
+                        <img src="imagens/carrinho.png" />
+                    </section>
+                    <section class="imagem-principal">
+                        <img src="imagens/baboda.jpg" />
+                    </section>
+                </section>
+
+                <section class="info">
+                    <h1>Babosa</h1>
+                    <p class="preco">
+                        <span class="preco-antigo">R$2.535,50</span>
+                        <span class="preco-novo">em até 12x R$211,25</span>
+                    </p>
+                    <section class="avaliacao">★★★★★</section>
+
+                        <section class="cores">
+                            <p>Cor:</p>
+                            <span class="cor" style="background:#4a3f35;"></span>
+                            <span class="cor" style="background:#fff;"></span>
+                            <span class="cor" style="background:#000;"></span>
+                        </section>
+
+                        <button class="btn-add">Adicionar ao carrinho</button>
+
+                        <section class="frete">
+                            <label for="cep">Simule seu frete:</label>
+                            <input type="text" id="cep" placeholder="CEP" />
+                            <button class="btn-calcular">Calcular</button>
+                        </section>
+                    </section>
+            </main>
+
+            <section class="descricao">
+                <h2>Descrição</h2>
+                <p>
+                    Planta suculenta de folhas espessas e serrilhadas, cheias de um gel transparente com propriedades medicinais. É amplamente usada para tratar queimaduras, hidratar a pele e fortalecer os cabelos. Também pode ser consumida em sucos (em pequenas quantidades), com efeito desintoxicante. Gosta de sol e pouca água.
+
+
+                </p>
+            </section>
+
+            <section class="comentarios">
+                <h3>Comentários</h3>
+                <p class="sem-comentario">Sem Comentários</p>
+            </section>
+
+            <%- include("../partials/footer") %>
+</body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="css/styled.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <%- include("../partials/nav") %>
+        <%- include("../partials/header") %>
+
+            <main class="container-detalhes">
+
+                <section class="galeria">
+                    <section class="miniaturas">
+                        <img src="imagens/logoflor.png" />
+                        <img src="imagens/samambaia.webp" />
+                        <img src="imagens/carrinho.png" />
+                    </section>
+                    <section class="imagem-principal">
+                        <img src="imagens/samambaia.webp" />
+                    </section>
+                </section>
+
+                <section class="info">
+                    <h1>Samambaia</h1>
+                    <p class="preco">
+                        <span class="preco-antigo">R$2.535,50</span>
+                        <span class="preco-novo">em até 12x R$211,25</span>
+                    </p>
+                    <section class="avaliacao">★★★★★</section>
+
+                        <section class="cores">
+                            <p>Cor:</p>
+                            <span class="cor" style="background:#4a3f35;"></span>
+                            <span class="cor" style="background:#fff;"></span>
+                            <span class="cor" style="background:#000;"></span>
+                        </section>
+
+                        <button class="btn-add">Adicionar ao carrinho</button>
+
+                        <section class="frete">
+                            <label for="cep">Simule seu frete:</label>
+                            <input type="text" id="cep" placeholder="CEP" />
+                            <button class="btn-calcular">Calcular</button>
+                        </section>
+                    </section>
+            </main>
+
+            <section class="descricao">
+                <h2>Descrição</h2>
+                <p>
+                    Planta ornamental com folhas longas e arqueadas, compostas por numerosos folíolos delicados. Muito usada para decorar interiores e varandas, principalmente em vasos suspensos. Precisa de ambiente úmido, luz indireta e regas frequentes. Ajuda a purificar o ar e traz um visual tropical e exuberante ao ambiente.
+                </p>
+            </section>
+
+            <section class="comentarios">
+                <h3>Comentários</h3>
+                <p class="sem-comentario">Sem Comentários</p>
+            </section>
+
+            <%- include("../partials/footer") %>
+</body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Pagamento</title>
+  <link rel="stylesheet" href="css/pagamento.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  
+    <%- include("../partials/header") %>
+<%- include("../partials/nav") %>
+  <main class="pagamento-container">
+    <h2>Escolha a forma de pagamento</h2>
+    <section class="metodos">
+      <section class="metodo">
+        <img src="imagens/cartao.png">
+        <span>Crédito</span>
+      </section>
+      <section class="metodo">
+        <img src="imagens/debito.png">
+        <span>Débito</span>
+      </section>
+      <section class="metodo">
+        <img src="imagens/pix.png">
+        <span>Pix</span>
+      </section>
+      <section class="metodo">
+        <img src="imagens/PayPal.png">
+        <span>PayPal</span>
+      </section>
+      <section class="metodo">
+        <img src="imagens/boleto.png">
+        <span>Boleto</span>
+      </section>
+      <section class="metodo">
+        <img src="imagens/outro.png">
+        <span>Outro</span>
+      </section>
+    </section>
+    <button onclick="location.href='/'">Confirmar pagamento</button>
+  </main>
+
+  <%- include("../partials/footer") %>
+</body>
+
+</html>

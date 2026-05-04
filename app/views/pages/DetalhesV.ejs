@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaso Decorativo — Floria</title>
+  <link rel="stylesheet" href="css/detalhes.css" />
+</head>
+<body>
+
+  <%- include("../partials/header") %>
+  <%- include("../partials/nav") %>
+
+  <main class="container-detalhes">
+
+    <section class="galeria">
+      <nav class="miniaturas" aria-label="Miniaturas do produto">
+        <img src="/imagens/image.png"            alt="Vaso Decorativo Marrom — frente" class="ativa" />
+        <img src="/imagens/f2.png"               alt="Vaso Decorativo Marrom — lateral" />
+        <img src="/imagens/ft3.png"              alt="Vaso Decorativo Marrom — detalhe" />
+        <img src="/imagens/vasoautoirrigavel.png" alt="Vaso Autoirrigável" />
+      </nav>
+      <figure class="imagem-principal">
+        <img src="/imagens/image.png" id="imgPrincipal" alt="Vaso Decorativo Marrom" />
+      </figure>
+    </section>
+
+    <section class="info">
+      <h1>Vaso Decorativo Marrom</h1>
+
+      <p class="preco">
+        <s class="preco-antigo">R$ 75,00</s>
+        <strong class="preco-novo">R$ 55,99</strong>
+        <small class="preco-parcelado">em até 2x sem juros</small>
+      </p>
+
+      <p class="avaliacao" aria-label="Avaliação: 5 de 5 estrelas, 8 avaliações">
+        <span class="estrelas" aria-hidden="true">★★★★★</span>
+        <span class="qtd-avaliacoes">(8 avaliações)</span>
+      </p>
+
+      <hr class="separador">
+
+      <fieldset class="cores">
+        <legend>Cor:</legend>
+        <button class="cor selecionada" style="background:#4a3f35;" title="Marrom" aria-label="Marrom"></button>
+        <button class="cor"             style="background:#f7f4ef;" title="Bege"   aria-label="Bege"></button>
+        <button class="cor"             style="background:#2a2a2a;" title="Preto"  aria-label="Preto"></button>
+      </fieldset>
+
+      <fieldset class="quantidade-wrap">
+        <legend class="sr-only">Quantidade</legend>
+        <button class="qty-btn" onclick="alterarQtd(-1)" aria-label="Diminuir">−</button>
+        <input class="qty-input" type="number" id="qtd" value="1" min="1" readonly aria-label="Quantidade" />
+        <button class="qty-btn" onclick="alterarQtd(1)"  aria-label="Aumentar">+</button>
+      </fieldset>
+
+      <button class="btn-add">
+        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>&nbsp; Adicionar ao carrinho
+      </button>
+
+      <ul class="info-tags" aria-label="Características">
+        <li class="info-tag"><i class="fa-solid fa-sun" aria-hidden="true"></i> Uso interno e externo</li>
+        <li class="info-tag"><i class="fa-solid fa-shield" aria-hidden="true"></i> Resistente</li>
+        <li class="info-tag"><i class="fa-solid fa-feather" aria-hidden="true"></i> Leve</li>
+      </ul>
+
+      <section class="frete" aria-labelledby="lbl-frete-v">
+        <h3 id="lbl-frete-v">Simule seu frete</h3>
+        <form class="frete-row" onsubmit="return false;">
+          <label for="cep" class="sr-only">CEP</label>
+          <input type="text" id="cep" placeholder="Digite seu CEP" maxlength="9" />
+          <button type="button" class="btn-calcular">Calcular</button>
+        </form>
+      </section>
+    </section>
+
+  </main>
+
+  <section class="descricao" aria-labelledby="lbl-desc-v">
+    <article class="descricao-inner">
+      <h2 id="lbl-desc-v">Descrição</h2>
+      <p>Produzido em polietileno de alta durabilidade, é leve e resistente — pode ser usado em áreas internas
+      e externas, suportando sol, chuva e maresia. Não prolifera fungos ou bactérias e ajuda na manutenção
+      da umidade do substrato.</p>
+    </article>
+  </section>
+
+  <section class="comentarios">
+    <h3>Comentários</h3>
+    <p class="sem-comentario">Nenhum comentário ainda. Seja o primeiro a avaliar!</p>
+  </section>
+
+  <%- include("../partials/footer") %>
+
+  <script>
+    const miniaturas = document.querySelectorAll('.miniaturas img');
+    const principal  = document.getElementById('imgPrincipal');
+    miniaturas.forEach(img => {
+      img.addEventListener('click', () => {
+        principal.src = img.src; principal.alt = img.alt;
+        miniaturas.forEach(m => m.classList.remove('ativa'));
+        img.classList.add('ativa');
+      });
+    });
+    function alterarQtd(delta) {
+      const input = document.getElementById('qtd');
+      input.value = Math.max(1, parseInt(input.value) + delta);
+    }
+    document.getElementById('cep').addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g,'').replace(/^(\d{5})(\d)/,'$1-$2').slice(0,9);
+    });
+  </script>
+  <script src="/js/itens.js"></script>
+</body>
+</html>
