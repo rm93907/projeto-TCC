@@ -1,0 +1,19 @@
+{
+  "name": "projeto-tcc",
+  "version": "1.0.0",
+  "description": "Express e EJS atualizados em fev/25",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rm93907/projeto-TCC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rm93907/projeto-TCC/issues"
+  },
+  "homepage": "https://github.com/rm93907/projeto-TCC#readme"
+}
